@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: rgb(0, 162, 255);
+            color: rgb(255, 255, 255);
+            font: normal 18pt Arial;
+        }         
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM </h1>
+    <p>Aqui vai o resultado</p>
+    <p name='p1' id='p2'>aprendendo a usar o <strong>DOM</strong> em javascript.</p>
+    <div class="dives">clique aqui</div>
+    <script>
+        document.write(window.location + '<br>')
+        document.write(window.document.URL + '<br>')
+        //document.write(window.history)
+        var corpo = window.document.body
+        //corpo.style.background = 'green'
+        var p = window.document.getElementsByTagName('p')[0]
+        //p.innerHTML = 'oi'
+        var p1 = document.getElementsByName('p1')[0]
+        //document.write(p1.innerHTML)
+        //document.write(p1.innerText)
+        var p2 = document.getElementById('p2')
+        //p2.innerHTML = 'oi'
+        var div = document.getElementsByClassName('dives')[0]
+        //div.innerHTML = 'oi'
+        var div1 = document.querySelector('div.dives') // tipo . classe
+        //div1.innerHTML = 'oi'
+        var p3 = document.querySelector('p#p2') // tipo # id
+        //p3.innerHTML = 'oi'
+    </script>
+</body>
